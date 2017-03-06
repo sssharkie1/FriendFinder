@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<head>
+	<title>Friend Finder - Survey Page</title>
+
+	<style media="screen" type="text/css">
+
+.btn-group {
+	min-height: 75px;
+}
+.questions {
+	margin-left: 40px;
+}
+
+</style>
+
+</head>
+<body>
+<div class = "jumbotron">
+
+
+	<div class = "text-center" id = 'instructions'>
+	  	<h1>Welcome to Friend Finder!</h1>
+		<h2>Please answer the following ten questions</h2>
+		<p>All answers are based on a scale of one to five - one meaning you do not agree with the statement at all, and five menaning you totally agree with the statement.  Once finished, click on the submit button to get your results.</p>
+	</div>
+<div class="jumbotron text-left questions">
+
+	<!-- Single button -->
+	<div class="btn-group">
+	  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    I really like kids. <span class="caret"></span>
+	  </button>
+		  <ul class="dropdown-menu">
+		    <li>1 - I strongly disagree.</li>
+		    <li>2 - I generally disagree.</li>
+		    <li>3 - I am neutral.</li>
+		    <li>4 - I generally agree.</li>
+		    <li>5 - I strongly agree.</li>
+		  </ul>
+	</div>
+<br>
+		<div class="btn-group">
+	  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    I can can sing and/or dance. <span class="caret"></span>
+	  </button>
+		  <ul class="dropdown-menu">
+		    <li>1 - I strongly disagree.</li>
+		    <li>2 - I generally disagree.</li>
+		    <li>3 - I am neutral.</li>
+		    <li>4 - I generally agree.</li>
+		    <li>5 - I strongly agree.</li>
+		  </ul>
+	</div>
+<br>
+		<div class="btn-group">
+	  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    I feel I possess some magical abilities. <span class="caret"></span>
+	  </button>
+		  <ul class="dropdown-menu">
+		    <li>1 - I strongly disagree.</li>
+		    <li>2 - I generally disagree.</li>
+		    <li>3 - I am neutral.</li>
+		    <li>4 - I generally agree.</li>
+		    <li>5 - I strongly agree.</li>
+		  </ul>
+	</div>
+<br>
+		<div class="btn-group">
+	  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    I am a generally happy go lucky person.<span class="caret"></span>
+	  </button>
+		  <ul class="dropdown-menu">
+		    <li>1 - I strongly disagree.</li>
+		    <li>2 - I generally disagree.</li>
+		    <li>3 - I am neutral.</li>
+		    <li>4 - I generally agree.</li>
+		    <li>5 - I strongly agree.</li>
+		  </ul>
+	</div>
+<br>
+		<div class="btn-group">
+	  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    I am a very social person. <span class="caret"></span>
+	  </button>
+		  <ul class="dropdown-menu">
+		    <li>1 - I strongly disagree.</li>
+		    <li>2 - I generally disagree.</li>
+		    <li>3 - I am neutral.</li>
+		    <li>4 - I generally agree.</li>
+		    <li>5 - I strongly agree.</li>
+		  </ul>
+	</div>
+<br>
+		<div class="btn-group">
+	  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    I like to dress up and look nice.<span class="caret"></span>
+	  </button>
+		  <ul class="dropdown-menu">
+		    <li>1 - I strongly disagree.</li>
+		    <li>2 - I generally disagree.</li>
+		    <li>3 - I am neutral.</li>
+		    <li>4 - I generally agree.</li>
+		    <li>5 - I strongly agree.</li>
+		  </ul>
+	</div>
+<br>
+		<div class="btn-group">
+	  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    I am a kid at heart, or at least have a whimsical side.<span class="caret"></span>
+	  </button>
+		  <ul class="dropdown-menu">
+		    <li>1 - I strongly disagree.</li>
+		    <li>2 - I generally disagree.</li>
+		    <li>3 - I am neutral.</li>
+		    <li>4 - I generally agree.</li>
+		    <li>5 - I strongly agree.</li>
+		  </ul>
+	</div>
+<br>
+		<div class="btn-group">
+	  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    I like to take risks. <span class="caret"></span>
+	  </button>
+		  <ul class="dropdown-menu">
+		    <li>1 - I strongly disagree.</li>
+		    <li>2 - I generally disagree.</li>
+		    <li>3 - I am neutral.</li>
+		    <li>4 - I generally agree.</li>
+		    <li>5 - I strongly agree.</li>
+		  </ul>
+	</div>
+<br>
+		<div class="btn-group">
+	  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    I would rather watch TV than read a book. <span class="caret"></span>
+	  </button>
+		  <ul class="dropdown-menu">
+		    <li>1 - I strongly disagree.</li>
+		    <li>2 - I generally disagree.</li>
+		    <li>3 - I am neutral.</li>
+		    <li>4 - I generally agree.</li>
+		    <li>5 - I strongly agree.</li>
+		  </ul>
+	</div>
+<br>
+		<div class="btn-group">
+	  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    I love to cook.<span class="caret"></span>
+	  </button>
+		  <ul class="dropdown-menu">
+		    <li>1 - I strongly disagree.</li>
+		    <li>2 - I generally disagree.</li>
+		    <li>3 - I am neutral.</li>
+		    <li>4 - I generally agree.</li>
+		    <li>5 - I strongly agree.</li>
+		  </ul>
+	</div>
+<br>
+
+
+		
+ 
+	<div id = 'results'>
+		
+	</div>
+</div>
+
+	  <script type="text/javascript">
+
+    $(document).ready(function () {
+        $('.dropdown-toggle').dropdown();
+    });
+
+
+</script>
+</body>
+</html>
