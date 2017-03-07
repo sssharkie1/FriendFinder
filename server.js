@@ -2,7 +2,7 @@
 // ===========================================================
 var express = require("express");
 var bodyParser = require("body-parser");
-//var path = require("path";)
+var path = require("path");
 
 
 var app = express();
@@ -20,6 +20,10 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 require("./routing/apiRoutes")(app);
 require("./routing/htmlRoutes")(app);
+
+//require html and api route javascript files
+// require(path.join(__dirname, 'app/routing/apiRoutes.js'))(app);
+// require(path.join(__dirname, 'app/routing/htmlRoutes.js'))(app);
 
 // Listener
 // ===========================================================

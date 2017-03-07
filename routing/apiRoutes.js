@@ -5,24 +5,51 @@
 // You should save the data in your app as an array of objects. Each of these objects should roughly follow the format below.
 
 //var surveyData = require('../app/data/survey');
-//var friendsData = require('../app/data/friends');
+//var friendsArray = require('../app/data/friends');
+
+var friendsArray = require('../app/data/friends.js');
+
+// =============================================================
+//ROUTING
 
 module.exports = function(app) {
+	//API GET request for the data from the surveys already taken
+	app.get('/api/friends', function(req, res){
+		res.json(friendsArray);
+		console.log(friendsArray);
+	});
 
-// app.get('/api/make-a-reservation', function (req, res) {
-//     res.json(tableData) 
-// });
+	// API POST Requests
+	app.post('/api/friends',function(req,res){
 
-app.post('/api/survey', function (req, res) {
+		var newFriend = req.body;
+		console.log(newFriend);
 
-// if (tableData.length < 5) {
-//     tableData.push(req.body);
-//     res.json(true);
-//     }
-// else{
-//     waitinglistData.push(req.body);
-//     res.json(false);
-//     }
-});
+		friendsArray.push(newFriend);
 
-};
+			
+		var differenceScore = 0;
+
+			
+		var differencesArray = [];
+			
+
+		for (var i = 0; i < (friendsArray.length - 1); i++){
+				
+				
+			for (var j = 0; j < friendsArray[i].scores.length; j++){
+					differenceScore += Math.abs(friendsArray[i].scores[j] - newFriend.scores[j]);
+				}
+
+				differencesArray.push(differenceScore);
+				differenceScore = 0;
+		}
+			
+			var friendMatch = friendsArray[differencesArray.indexOf(Math.min.apply(null, differencesArray))];
+
+			res.send(friendMatch);
+
+	});
+}
+
+
