@@ -2,11 +2,9 @@
 <html lang="en">
 <html>
 	<meta charset="UTF-8">
-<!-- Latest compiled and minified CSS -->
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
 
@@ -14,12 +12,10 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 
-
-
 <style media="screen" type="text/css">
 
 			.btn-group {
-				min-height: 75px;
+				min-height: 10px;
 			}
 			.questions {
 				margin-left: 40px;
@@ -37,17 +33,15 @@
 				margin-top: 10px; 
 			}
 
-			#links{
-   				 margin-left: 20px;
-			}
-
 
 			body {
-	 			background-image: url('friendsBackground.jpg');
 	 			font-family: 'Luckiest Guy', cursive;
+	 			 background-image: url('friendsBackground.jpg');
 			}
 
+
 </style>
+
 
 <head>
 
@@ -57,7 +51,7 @@
 
 <body>
 
-		<div class="image">
+		<div >
 
 			<div class = "jumbotron">
 
@@ -66,7 +60,6 @@
 				  	<h1>Welcome to Friend Finder!</h1>
 					<h2>Please complete the following information.</h2>
 				</div>
-
 
 
 					<div class="container">
@@ -210,7 +203,7 @@
 
 			</div>
 
-
+</body>	
 
 		<footer class="footer">
 
@@ -246,7 +239,7 @@
 
 	  </div>
 	</div>
-</body>	
+
 <script>
 	  
 	  //Get and store survey results 
@@ -285,7 +278,7 @@
 	        // AJAX post the data to the friendsArray. 
 	        $.post(currentURL + "/api/friends", friends, function(data){
 
-	          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+	          // Grab the result from the AJAX 
 	          $("#matchName").text(data.name);
 	          $("#matchImg").attr("src", data.photo);
 
@@ -301,12 +294,12 @@
 	      return false;
 	    });
 
-	    //On modal close, clear data for new user
+	    //On modal close, clear data
 	     $(".close").on("click", function(){
 	        $('#name').val(" ");
 	        $('#photo').val(" ");
 
-	        //Reset the chosen options back to empty
+	        //Reset the options back to empty
 	        $(".chosen-select").val('').trigger("chosen:updated");
 	     });
 
