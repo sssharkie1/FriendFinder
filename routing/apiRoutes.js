@@ -4,22 +4,19 @@
 
 // You should save the data in your app as an array of objects. Each of these objects should roughly follow the format below.
 
-//var surveyData = require('../app/data/survey');
-//var friendsArray = require('../app/data/friends');
 
 var friendsArray = require('../app/data/friends.js');
 
-// =============================================================
-//ROUTING
 
 module.exports = function(app) {
-	//API GET request for the data from the surveys already taken
+
+
 	app.get('/api/friends', function(req, res){
 		res.json(friendsArray);
 		console.log(friendsArray);
 	});
 
-	// API POST Requests
+
 	app.post('/api/friends',function(req,res){
 
 		var newFriend = req.body;
